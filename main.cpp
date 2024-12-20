@@ -8,6 +8,7 @@ int main(){
         
         model.GetPath("main.txt");
         std::cout << model << std::endl;
+        //LOL KEK
     }
 
     catch(std::string err)
