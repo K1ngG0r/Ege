@@ -12,14 +12,18 @@ namespace fs = std::filesystem;
 
 class Direct{
     private:
-        std::string path;
+        std::string _path;
     private:
+        //Ищем последний символ
         int FindLastChar(std::string tmp, char a);
     public:
+        //Конструктор по умолчанию, ставим "." т.е. путь к начальной дериктории
         Direct();
 
+        //Конструктор с указанием пути к дериктории
         Direct(std::string path);
-
+        
+        //Перегурзка оперетора вывода
         friend std::ostream& operator<<(std::ostream& out, Direct& dr);
 };
 

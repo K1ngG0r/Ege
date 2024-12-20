@@ -1,10 +1,24 @@
 #include <iostream>
-#include "src/Director/direct.h"
+#include "fileMenager/model.h"
 
 int main(){
-    Direct dr{"src/"};
+    try
+    {
+        Model model;
+        
+        model.GetPath("main.txt");
+        std::cout << model << std::endl;
+    }
 
-    std::cout << dr << std::endl;
+    catch(std::string err)
+    {
+        std::cerr << err << '\n';
+    }
+
+    catch(...)
+    {
+        std::cout << "Unknown error(" << std::endl;
+    }
 
     return 0;
 }

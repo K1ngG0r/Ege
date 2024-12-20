@@ -1,11 +1,14 @@
 #include "direct.h"
 
+//Конструктор по умолчанию, ставим "." т.е. путь к начальной дериктории
 Direct::
-    Direct(): path{"."} {}
+    Direct(): _path{"."} {}
 
+//Конструктор с указанием пути к дериктории
 Direct::
-    Direct(std::string path): path{path}{}
+    Direct(std::string path): _path{path}{}
 
+//Ищем последний символ
 int Direct::
     FindLastChar(std::string tmp, char a){
 
@@ -20,9 +23,10 @@ int Direct::
         return 0;
     }
 
+//Перегурзка оперетора вывода
 std::ostream& operator<<(std::ostream& out, Direct& dr)
 {
-    for (const auto& entry : fs::directory_iterator(dr.path))
+    for (const auto& entry : fs::directory_iterator(dr._path))
     {
         std::string tmp = entry.path();
 
