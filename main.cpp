@@ -6,8 +6,10 @@ int main(){
     {
         Model model;
         
-        model.GetPath("main.txt");
-        std::cout << model << std::endl;
+        Files::CreateFile();
+        
+        // model.GetPath(".gitignore");
+        // std::cout << model << std::endl;
         //LOL KEK
     }
 
@@ -18,7 +20,7 @@ int main(){
 
     catch(...)
     {
-        std::cout << "Unknown error(" << std::endl;
+        std::cout << "Unknown error(" << '\n';
     }
 
     return 0;

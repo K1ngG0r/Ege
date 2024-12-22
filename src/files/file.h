@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <string>
 
 class Files{
     private: 
@@ -16,7 +17,7 @@ class Files{
 
         friend std::ostream& operator<<(std::ostream& os, const Files& fl );
 
-        void CreateFile();
+        static void CreateFile();
 };
 #include "file.cpp"
 

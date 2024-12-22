@@ -4,11 +4,11 @@
 Direct::
     Direct(): _path{"."} {}
 
-//Конструктор с указанием пути к дериктории
+
 Direct::
     Direct(std::string path): _path{path}{}
 
-//Ищем последний символ
+
 int Direct::
     FindLastChar(std::string tmp, char a){
 
@@ -23,7 +23,7 @@ int Direct::
         return 0;
     }
 
-//Перегурзка оперетора вывода
+
 std::ostream& operator<<(std::ostream& out, Direct& dr)
 {
     for (const auto& entry : fs::directory_iterator(dr._path))
