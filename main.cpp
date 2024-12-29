@@ -1,12 +1,14 @@
 #include <iostream>
-#include "fileMenager/model.h"
+#include "Finder/model.h"
 
 int main(){
     try
     {
-        Model model;
+        Model finder;
         
         Files::CreateFile();
+
+//        std::cout << model << std::endl;
         
         // model.GetPath(".gitignore");
         // std::cout << model << std::endl;

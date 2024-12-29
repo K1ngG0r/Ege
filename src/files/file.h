@@ -14,10 +14,11 @@ class Files{
 
         Files(std::string path);
 
+        static void CreateFile();
+
+        static void CopyFile();
 
         friend std::ostream& operator<<(std::ostream& os, const Files& fl );
-
-        static void CreateFile();
 };
 #include "file.cpp"
 

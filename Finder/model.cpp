@@ -6,7 +6,6 @@ Model::
 bool Model::
     isDir(std::string path)
     {
-
         if(path.find('.') && path[0] != '.') 
         {
             return false;
@@ -41,5 +40,7 @@ std::ostream& operator<<(std::ostream& os, const Model& menu)
 
         return os;
     }
+
+    
 
 }

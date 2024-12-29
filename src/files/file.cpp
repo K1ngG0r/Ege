@@ -3,30 +3,10 @@
 Files::
     Files(std::string path) : _path{path}{}
 
+void Files::
+    CopyFile(){
 
-std::ostream& operator<<(std::ostream& os, const Files& fl )
-{
-
-    std::ifstream in(fl._path);
-    
-    if(in.is_open())
-    {
-        os << "\nFile: " << fl._path << "\n\n";
-
-        char a;
-
-        while(in.get(a))
-        {
-            os << a;
-        }
     }
-    else
-    {
-        throw (std::string)"Error open file :(";
-    }
-
-    return os;
-}
 
 void Files::
     CreateFile()
@@ -109,3 +89,27 @@ void Files::
             }
         }
     }
+
+std::ostream& operator<<(std::ostream& os, const Files& fl )
+{
+
+    std::ifstream in(fl._path);
+    
+    if(in.is_open())
+    {
+        os << "\nFile: " << fl._path << "\n\n";
+
+        char a;
+
+        while(in.get(a))
+        {
+            os << a;
+        }
+    }
+    else
+    {
+        throw (std::string)"Error open file :(";
+    }
+
+    return os;
+}

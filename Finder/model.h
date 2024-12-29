@@ -8,6 +8,7 @@
 
 #include "../src/files/file.h"
 #include "../src/Director/direct.h"
+#include "../src/fileMenager/menu.h"
 
 class Model{
     private:
